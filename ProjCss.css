@@ -1,0 +1,126 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: khaki;
+  animation-name: CFade; 
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+}
+
+.page-title {
+  background: ivory;
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 5em;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-info {
+  color: #FFBB89;
+  font-size: 4em;
+}
+
+.game-container {
+   padding-top: 10px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.card {
+  position: relative;
+  height: 175px;
+  width: 125px;
+}
+
+.card-face {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
+
+.card:hover .card-back {
+  transform: rotateY(-180deg); 
+}
+
+.card:hover .card-front {
+  transform: rotateY(0);
+}
+
+.card-back {
+  background-color: black;
+  border-color: #FF6D00; 
+  
+}
+ 
+
+.pc {
+  align-self: flex-start;
+  transition: transform 100ms ease-in-out;
+  transform: translateY(-10px);
+}
+
+
+
+.card-value {
+  position: relative;
+  transition: transform 100ms ease-in-out;
+}
+
+
+.card-front {
+  background-color: white;
+  border-color: black;
+  transform: rotateY(180deg);
+}
+
+
+img.card-value{
+	height: auto;
+	width: 100%;
+}
+
+@keyframes CFade{
+	0%, 100%{
+		background-color: khaki;
+		
+	}
+	
+	25%, 50%{
+		background-color: teal;
+	}
+	
+	
+	
+}
+
+
+
